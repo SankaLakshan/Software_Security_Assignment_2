@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliit Msc Program Software Security Module - Assignment2 </title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <meta name="google-signin-client_id" content="583706571219-elscl6sk557icm7e7vukgaj3r1aqu13g.apps.googleusercontent.com">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<table>
+  <tr>
+      
+    <td colspan="3">
+      <img id="Header image" src="./Header_image1.jpg" alt="Header image">
+    </td>
+  </tr>
+  <tr bgcolor="orange" height="50"></tr>
+  <tr>
+    <td vertical_align: top;>
+      
+      <H1>Software security</H1>
+      <H3>Assignment 2 </H3>
+      <H2>Open Authorization- (Auth2.0)</H1>
+      <H4>Google Login and upload file to the drive</H2>
+        <p>Auth Status:</p>
+        <p id="AStatus">Auth Status</p>
+    </td>
+
+    <td>
+        <table border="0" width="550" Height="350" bgcolor="#2E86D1"><tr><td>
+            <div class="2data"><center>Click here to login to your Google Account</center></div>
+            <div class="g-signin2" data-onsuccess="onSighnIn"></div>
+            <div class="data">
+                <Br><Br>
+                <p>Sign In Successfull !</p>    
+                <p bgcolor="yellow"><center><H5>Profile Details</H5></center></p>
+                <img id="pic" calss="img-circle" width="100" height="100" alt="Sign in"/>
+                <p>Name:</p>
+                <p id="uname" calss="alert alert-danger"></p>
+                <p>Email :</p>
+                <p id="email" calss="alert alert-danger"></p>
+                <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+            </td>
+            </tr>
+            </div>
+        </table>
+        
+    </td>
+ 
+    <td>
+
+      <div class="roll">
+        <div class="inner-roll text-center">
+          <h2 class="title">Login to your account</h2>
+          <form action="" id="formvalidate">
+            <div class="input-settings">
+              <label class="palceholder" for="userName">User Name</label>
+              <input class="form-control" name="userName" id="userName" type="text" placeholder="" />
+              <span class="lightning"></span>
+            </div>
+            <div class="input-settings">
+              <label class="palceholder" for="userPassword">Password</label>
+              <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="" />
+              <span class="lightning"></span>
+            </div>      
+            <button type="submit" id="login">Login</button>            
+          </form>          
+        </div>      
+      </div>      
+    </td>
+  </tr>
+  <tr bgcolor="white" height="200">
+    <td >
+        
+        <div><h1>Select a File for uploading</h1></div>
+        
+        <form action="" id="formvalidate2">
+         <label class="palceholder">Click here to select a File</label>
+         <input class="form-control" name="SFile" type="file" id="fileName" placeholder=""/>
+        </form>
+    </td>
+    <td>
+        <center>
+          <img id="Google_Drive" src="./GDrive1.png" alt="Goolge Drive" >
+          <button type="button" onclick="listFiles()" width="50" height="30">Upload the file to Google Drive</button> 
+          <br>
+          <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+          <br>
+          <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+
+      </center>
+    </td>
+    <td>
+        <p id="content">List of file</p>
+    </td>
+</tr>
+<tr Height="150">
+    <td  bgcolor="#2E86C1" colspan="3">
+        <div >
+            <div>Group Members:</div>
+            <ol>
+                <li>MS21921544 - M.M.R.R.K. Mapa</li>
+                <li>MS21928574 - Sanka Thillakaratne</li>
+            </ol>
+        </div>
+        <div>Programme: Msc. in Cybersecurity</div>
+        <div>Batch: 2021 July</div>
+        <Div>Lecturet : Pof.Dharshana Karunaratne</Div>
+    </td>
+</tr>
+</table>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'></script>
+<script  src="./script.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
+</body>
+</html>
